@@ -1,0 +1,113 @@
+<html>
+    <link rel="stylesheet" href="style.css">
+    <title>YUJIN | About</title>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">☾ MIDNIGHT SHINE</a>
+        <ul>
+            <li><a href="INDEX.html">HOME</a></li>
+            <li><a href="RESUME.html">RESUME</a></li>
+            <li><a href="ABOUT.html">ABOUT</a></li>
+            <li><a href="EDUCATION.html">EDUCATION</a></li>
+            <li><button class="open-popup-btn" onclick="openPopup()" id="openPopupButton">LALIN MATTHEWS</button>
+        </ul>
+    </header>
+    <!--section class="banner"></section-->
+
+    <div class="border">
+        <div class="content">
+            <div style="margin-bottom: 60px">
+                <li class="text">Graduated high school from RATCHASIMA WITTHAYALAI at 29/03/2024</li>
+                <img src="img-content/640px-Rslogo.png" style="width: 200px; margin: 0 auto; display: flex; padding: 20px;">
+            </div>
+            <div>
+                <div class="loading-container">
+                    <div class="circle-loader" style="display: flex;"></div>
+                    <p class="text">Currently studying at Maha Sarakham University.</p>
+                </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Mahasarakham_University_Emblem.png" style="width: 200px; margin: 0 auto; display: flex; padding: 20px;">
+            </div>    
+        </div>
+    </div>
+    <footer>
+        <div class="CONTACT">
+            <p style="font-weight: bolder;">PHONE</p>
+            <p>097-2900967</p>
+        </div>
+        <div class="CONTACT">
+            <p style="font-weight: bolder; margin-bottom: 6px;">SOCIALS</p>
+            <!--IG-->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" style="width: 15px;">
+            <a href="https://www.instagram.com/yujinrrr/" target="_blank" style="text-decoration: none; color: #000;">INSTAGRAM</a>
+            
+            <!--TWITCH-->
+            <img src="https://static.vecteezy.com/system/resources/previews/023/986/936/non_2x/twitch-logo-twitch-logo-transparent-twitch-icon-transparent-free-free-png.png" style="width: 15px;">
+            <a href="https://twitch.tv/yujinrrr" target="_blank" style="text-decoration: none; color: #000;">TWITCH</a>
+
+            <!--YOUTUBE-->
+            <img src="https://gallerypng.com/wp-content/uploads/2024/08/Stylish-youtube-logo-png-image-750x544.png" style="width: 15px;">
+            <a href="https://www.youtube.com/@midnightshine1105" target="_blank" style="text-decoration: none; color: #000;">YOUTUBE</a>
+        </div>
+        <div class="CONTACT">
+            <p style="font-weight: bolder; margin-bottom: 4px;">EMAIL</p>
+            <p>tntbk.official@gmail.com</p>
+            <p>Just1love.official@gmail.com</p>
+        </div>
+        <div class="CONTACT">
+            <p style="font-weight: 400; font-size: 15px; font-family: athiti;">©2024 BY TANATORN BUTKHUN</p>
+        </div>
+    </footer>
+
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <h2 style="font-size: 17px; font-weight: 600;">HINT : ชื่อจริงเธอเตงภาษาอังกฤษ</h2>
+            <p>ภาษาอังกฤษ และ พิมพ์เล็กเท่านั้น!!</p>
+            <input type="password" id="password" placeholder="Enter password" />
+            <button class="submit-btn" onclick="checkPassword()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the modal
+        function openPopup() {
+            document.getElementById("passwordModal").style.display = "flex";
+        }
+    
+        // Function to close the modal
+        function closePopup() {
+            document.getElementById("passwordModal").style.display = "none";
+        }
+    
+        // Function to check password
+        function checkPassword() {
+            const enteredPassword = document.getElementById("password").value;
+            const correctPassword = "thanasorn lipisunthorn";  // Correct password
+
+            // If the password is correct, redirect to another page
+            if (enteredPassword === correctPassword) {
+                window.location.href = "SECRET2.html";  // Redirect to protected page
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    
+        // Close the modal if the user clicks outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("passwordModal");
+            if (event.target == modal) {
+                closePopup();
+            }
+        }
+    </script>
+</body>
